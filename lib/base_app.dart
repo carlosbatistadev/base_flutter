@@ -11,8 +11,10 @@ class BaseApp extends StatelessWidget {
     return MaterialApp(
       title: AppConfig.instance.title,
       theme: ThemeData(
-        primaryColor: AppConfig.instance.primarColor,
-      ),
+          primaryColor: AppConfig.instance.primarColor,
+          appBarTheme: AppBarTheme(
+            color: AppConfig.instance.primarColor,
+          )),
       home: MyHomePage(title: AppConfig.instance.title),
     );
   }
@@ -43,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Column(
+        child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Text(
@@ -60,6 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
+        backgroundColor: AppConfig.instance.primarColor,
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
