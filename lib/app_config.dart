@@ -9,7 +9,9 @@ class AppConfig {
   late int id;
 
   late String url;
-  
+
   bool isProd = false;
   Color primarColor = Colors.red;
+
+  String image = '';
 }

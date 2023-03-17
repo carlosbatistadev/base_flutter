@@ -51,6 +51,7 @@ class _MyHomePageState extends State<MyHomePage> {
             Text(
               'O id do app é ${AppConfig.instance.id}',
             ),
+            Image.asset(AppConfig.instance.image),
             Text(
               'O baseURL ${AppConfig.instance.url}',
             ),
