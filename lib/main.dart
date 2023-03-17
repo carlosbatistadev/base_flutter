@@ -1,11 +1,6 @@
 import 'package:base_flutter/app_config.dart';
 import 'package:flutter/material.dart';
 
-void main() {
-  AppConfig.instance.id = 23;
-
-  runApp(const BaseApp());
-}
 
 class BaseApp extends StatelessWidget {
   const BaseApp({
