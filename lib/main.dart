@@ -1,7 +1,6 @@
 import 'package:base_flutter/app_config.dart';
 import 'package:flutter/material.dart';
 
-
 class BaseApp extends StatelessWidget {
   const BaseApp({
     Key? key,
@@ -38,13 +37,6 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  void iniState() {
-    super.initState();
-
-    AppConfig.instance.primarColor = Colors.blue;
-  }
-
-  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -56,6 +48,9 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'O id do app é ${AppConfig.instance.id}',
+            ),
+            Text(
+              'O baseURL ${AppConfig.instance.url}',
             ),
             Text(
               '$_counter',
